@@ -8,8 +8,7 @@ const Layout = () => {
            
             <nav className="nav bg-dark  border-bottom border-body" data-bs-theme="dark"> 
                 <Link to="/" className="nav-link active p-4">Register</Link>
-                <Link to="/login"  className="nav-link active p-4">Login</Link>
-                <Link to="/tasks" className="nav-link active p-4">Tasks</Link>
+                <Link to="/login"  className="nav-link active p-4">Login</Link>             
             </nav> 
             <div className="col-12  p-5 ">
                 <Outlet/>
