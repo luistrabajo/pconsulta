@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../costumer.css'
+
 
 
 
@@ -39,25 +39,25 @@ function Register() {
     }
 
     return(
-        <><div>
-                <div className="testbox">
-                        <h1>REGISTER</h1>
-                        <form>
-                        <hr/>
-                        <label id="icon"><i className="icon-envelope "></i></label>
-                        <input  type="text"  id="email" placeholder="Email" required
-                        onChange={(event)=>{setEmail(event.target.value)}}/>                       
-                        <label id="icon" ><i className="icon-shield"></i></label>
-                        <input type="password"  id="password" placeholder="Password" required
-                        onChange={(event)=>{setPassword(event.target.value)}}/>                       
-                        <a onClick={register} className="button">Login</a>
-                        </form>
-                        </div>                
+        <div className="col-3  bg-light "> 
+                    <div className="row g-3 align-items-center border border-dark" style={{backgroundColor: "gainsboro"}}>
+                        <h1 className="text-center p-2">REGISTER</h1>
+                    <div className="col-11">
+                     <label  className="col-form-label"><i className="icon-envelope mx-2 p-1" style={{color: "green"}}>  </i>Email</label>                    
+                     <input type="email" id="inputPassword6" className="form-control mx-2 p-2" aria-describedby="passwordHelpInline"
+                      required   onChange={(event)=>{setEmail(event.target.value)}} ></input>
+                   </div>
+                   <div className="col-11">
+                     <label  className="col-form-label"><i className="icon-shield mx-2 p-1" style={{color: "green"}}></i>Password</label>                    
+                     <input type="email" id="inputPassword6" className="form-control mx-2 p-2" aria-describedby="passwordHelpInline"
+                      required   onChange={(event)=>{setPassword(event.target.value)}}></input>
+                   </div>  
+                   <div >
+                        <button type="button" className="btn btn-primary  p-2 mx-2 my-2 col-11" onClick={register}>Guardar</button>
+                   </div> 
                     </div>
-            </>
+                </div> 
     );
 }
-
-
 
 export default Register

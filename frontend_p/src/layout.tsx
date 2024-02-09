@@ -4,21 +4,18 @@ import './costumer.css';
 
 const Layout = () => {
     return(
-            <div>
-                <nav className="nav">
-                    <ul className="ul">
-                        <li className="li">
-                            <Link to="/">Register</Link>
-                        </li>
-                        <li>
-                            <Link to="/login">Login</Link>
-                        </li>   
-                                     
-                    </ul>
-                    <hr/>
-                </nav>               
-            <Outlet/>
-            </div>)
+        <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12   my-0"> 
+           
+            <nav className="nav bg-dark  border-bottom border-body" data-bs-theme="dark"> 
+                <Link to="/" className="nav-link active p-4">Register</Link>
+                <Link to="/login"  className="nav-link active p-4">Login</Link>
+                <Link to="/tasks" className="nav-link active p-4">Tasks</Link>
+            </nav> 
+            <div className="col-12  p-5 ">
+                <Outlet/>
+            </div>          
+                
+        </div>)
 }
 
 export default Layout

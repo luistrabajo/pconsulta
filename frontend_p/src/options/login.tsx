@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Home from '../tasks/tasks';
-import '../costumer.css'
+
 
 
 
@@ -40,22 +40,26 @@ function Login() {
     }
 
     return(
-        <>{loginSuccessful ? <Home />: <div className="custom-form">
-                <div className="testbox">
-                        <h1>LOGIN</h1>
-                        <form>
-                        <hr/>
-                        <label id="icon"><i className="icon-envelope "></i></label>
-                        <input type="text" name="name" id="name" placeholder="Email" required
-                        onChange={(event)=>{setEmail(event.target.value)}}/>                       
-                        <label id="icon" ><i className="icon-shield"></i></label>
-                        <input type="password" name="name" id="name" placeholder="Password" required
-                        onChange={(event)=>{setPassword(event.target.value)}}/>                       
-                        <a onClick={handdleLogin} className="button">Login</a>
-                        </form>
-                        </div>                
+        <>{loginSuccessful ? <Home />: 
+        <div className="col-3  bg-light "> 
+                <div className="row g-3 align-items-center border border-dark" style={{backgroundColor: "gainsboro"}}>
+                    <h1 className="text-center p-2">LOGIN</h1>
+                    <div className="col-11">
+                        <label  className="col-form-label"><i className="icon-envelope mx-2 p-1" style={{color: "green"}}>  </i>Email</label>                    
+                        <input type="email" id="inputPassword6" className="form-control mx-2 p-2" aria-describedby="passwordHelpInline"
+                        required   onChange={(event)=>{setEmail(event.target.value)}} ></input>
                     </div>
-            }</>
+                    <div className="col-11">
+                        <label  className="col-form-label"><i className="icon-shield mx-2 p-1" style={{color: "green"}}></i>Password</label>                    
+                        <input type="email" id="inputPassword6" className="form-control mx-2 p-2" aria-describedby="passwordHelpInline"
+                        required   onChange={(event)=>{setPassword(event.target.value)}}></input>
+                    </div>  
+                    <div >
+                        <button type="button" className="btn btn-primary  p-2 mx-2 my-2 col-11" onClick={handdleLogin}>SEND</button>
+                    </div> 
+                </div>
+            </div> 
+        }</>
     );
 }
 
