@@ -38,7 +38,7 @@ function App() {
   };
 
   return (
-    <main className="bg-dark vh-100 text-white">
+    <main className="bg-light vh-100 text-white">
       <TaskBanner userName={userName} taskItems={taskItems} />
       <Container>
         <TaskCreator createNewTask={createNewTask} />
